@@ -17,7 +17,7 @@ a {
   color: #fff;
 }
 #minicircle {
-  transition: all cubic-bezier(0.19,1,0.22,1) 1s;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
   width: 12px;
   height: 12px;
   position: absolute;
@@ -149,8 +149,11 @@ a {
   position: absolute;
   z-index: 999;
   height: 140%;
-  display: none;
+  opacity: 0; /* 👈 Use this instead of display: none */
+  pointer-events: none;
+  transition: opacity 0.3s ease;
 }
+
 #about {
   padding: 6vw 8vw;
   padding-left: 40vw;
